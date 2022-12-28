@@ -1,0 +1,38 @@
+#Get data
+with open("input.in") as f:
+    data = [i for i in f.read().strip().split("\n")]
+
+"""
+A and X = Rock (1 point)
+B and Y = Paper (2 points)
+C and Z = Scissors (3 points)
+X need to lose
+Y need to draw
+Z need to win
+win = 6 points
+draw = 3 points
+lose = 0 points
+"""
+
+sum = 0
+for i in data:
+    if i == "A X":
+        sum += 3
+    if i == "A Y":
+        sum += 4
+    if i == "A Z":
+        sum += 8
+    if i == "B X":
+        sum += 1
+    if i == "B Y":
+        sum += 5
+    if i == "B Z":
+        sum += 9
+    if i == "C X":
+        sum += 2
+    if i == "C Y":
+        sum += 6
+    if i == "C Z":
+        sum += 7
+
+print(sum)
